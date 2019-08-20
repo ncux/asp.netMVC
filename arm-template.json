@@ -7,34 +7,34 @@
         {
             "type": "Microsoft.Web/serverfarms",
             "apiVersion": "2016-09-01",
-            "name": "frankdemoplan",
+            "name": "ASP-TalentGroupLinux-8fd4",
             "location": "[resourceGroup().location]",
             "sku": {
                 "name": "F1",
                 "capacity": 1
             },
             "tags": {
-                "displayName": "frankdemoplan"
+                "displayName": "ASP-TalentGroupLinux-8fd4"
             },
             "properties": {
-                "name": "frankdemoplan"
+                "name": "ASP-TalentGroupLinux-8fd4"
             }
         },
         {
             "type": "Microsoft.Web/sites",
-            "apiVersion": "2015-08-01",
-            "name": "frankdemo4243",
+            "apiVersion": "2018-02-01",
+            "name": "aspnet-mvc_one",
             "location": "[resourceGroup().location]",
             "tags": {
-                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/frankdemoplan')]": "Resource",
-                "displayName": "frankdemo4243"
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/ASP-TalentGroupLinux-8fd4')]": "Resource",
+                "displayName": "aspnet-mvc_one"
             },
             "dependsOn": [
-                "Microsoft.Web/serverfarms/frankdemoplan"
+                "Microsoft.Web/serverfarms/ASP-TalentGroupLinux-8fd4"
             ],
             "properties": {
-                "name": "frankdemo4243",
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', 'frankdemoplan')]"
+                "name": "aspnet-mvc_one",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', 'ASP-TalentGroupLinux-8fd4')]"
             }
         }
     ],
